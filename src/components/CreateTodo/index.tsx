@@ -1,13 +1,13 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import { useMediaQuery } from "react-responsive";
 
 interface CreateTodoProps {
-  onSubmit(): void;
+  onSubmit(val: FieldValues): void;
 }
 
 export const CreateTodo = ({ onSubmit }: CreateTodoProps) => {
-  const { register } = useForm();
+  const { register, handleSubmit } = useForm();
   const isLaptop = useMediaQuery({
     query: "(max-width: 1269px)",
   });
@@ -21,7 +21,7 @@ export const CreateTodo = ({ onSubmit }: CreateTodoProps) => {
       }}
     >
       <h2 style={{ textAlign: isLaptop ? "center" : "left" }}>Create Todo</h2>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div
           style={{
             display: "flex",

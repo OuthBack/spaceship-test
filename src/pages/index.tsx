@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useForm } from "react-hook-form";
+import { FieldValues } from "react-hook-form";
 import { trpc } from "../utils/trpc";
 import z from "zod";
 import { useEffect } from "react";
@@ -21,7 +21,6 @@ const Home: NextPage = () => {
   const { mutate: mutateRemove, isSuccess: removeIsSuccess } =
     trpc.useMutation("todos.remove");
   const { data, isLoading, refetch } = trpc.useQuery(["todos.getAll"]);
-  const { handleSubmit } = useForm();
 
   const isLaptop = useMediaQuery({
     query: "(max-width: 1269px)",
@@ -67,10 +66,10 @@ const Home: NextPage = () => {
           }}
         >
           <CreateTodo
-            onSubmit={handleSubmit(async (val) => {
+            onSubmit={async (val: FieldValues) => {
               const todo = todoValidator.parse(val);
               mutateCreate(todo);
-            })}
+            }}
           />
         </div>
         <div
