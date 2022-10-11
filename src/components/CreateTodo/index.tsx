@@ -1,6 +1,7 @@
 import React from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import { useMediaQuery } from "react-responsive";
+import { GAP, PADDING } from "../../styles/global-variables";
 
 interface CreateTodoProps {
   onSubmit(val: FieldValues): void;
@@ -17,7 +18,7 @@ export const CreateTodo = ({ onSubmit }: CreateTodoProps) => {
       style={{
         position: "sticky",
         top: 20,
-        paddingRight: 12,
+        paddingRight: PADDING.sm,
       }}
     >
       <h2 style={{ textAlign: isLaptop ? "center" : "left" }}>Create Todo</h2>
@@ -29,7 +30,9 @@ export const CreateTodo = ({ onSubmit }: CreateTodoProps) => {
             alignItems: "center",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: GAP.sm }}
+          >
             <label htmlFor="title">
               <span>Title *</span>
             </label>

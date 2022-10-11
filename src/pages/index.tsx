@@ -7,8 +7,7 @@ import { useEffect } from "react";
 import { CreateTodo } from "../components/CreateTodo";
 import { TodoItem } from "../components/TodoItem";
 import { useMediaQuery } from "react-responsive";
-
-const GAP = 12;
+import { GAP, PADDING } from "../styles/global-variables";
 
 const todoValidator = z.object({
   title: z.string(),
@@ -42,7 +41,7 @@ const Home: NextPage = () => {
       </Head>
       <div
         style={{
-          padding: "28px 0",
+          padding: `${PADDING.md2} 0`,
         }}
       >
         <h1 style={{ textAlign: "center", margin: 0 }}>Todos list app</h1>
@@ -51,8 +50,8 @@ const Home: NextPage = () => {
         style={{
           display: "flex",
           flexDirection: isLaptop ? "column" : "row",
-          gap: "28px",
-          padding: "0 36px 36px",
+          gap: GAP.md,
+          padding: `0 ${PADDING.lg} ${PADDING.lg}`,
         }}
       >
         <div
@@ -75,14 +74,14 @@ const Home: NextPage = () => {
         <div
           style={{
             flexGrow: 2,
-            padding: "0 24px",
+            padding: `0 ${PADDING.md}`,
           }}
         >
           <div
             style={{
               display: "flex",
               flexWrap: "wrap",
-              gap: GAP,
+              gap: GAP.sm,
               justifyContent: isLaptop ? "center" : "",
             }}
           >

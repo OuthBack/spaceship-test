@@ -3,6 +3,7 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import { TrashIcon } from "@heroicons/react/24/solid";
 import { useMediaQuery } from "react-responsive";
+import { PADDING } from "../../styles/global-variables";
 
 interface TodoProps {
   id: number;
@@ -21,7 +22,7 @@ export const TodoItem = ({ id, title, createdAt, removeTodo }: TodoProps) => {
       key={id}
       style={{
         border: "1px solid grey",
-        padding: 16,
+        padding: PADDING.sm2,
         borderRadius: 6,
         position: "relative",
         paddingRight: 66,
