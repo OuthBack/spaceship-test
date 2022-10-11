@@ -16,17 +16,27 @@ export const todoRouter = createRouter()
       id: z.number(),
     }),
     async resolve({ ctx, input }) {
-      // Buscar um TODO por sua primaryKey
-      return null;
+      const todo = ctx.prisma.todo.findFirst({ where: { id: input.id } });
+
+      return todo;
     },
   })
   .mutation("create", {
     input: z.object({
-      // title: ???,
-      // description: ???,
+      title: z.string(),
+      description: z.string(),
     }),
     async resolve({ ctx, input }) {
-      // Criar um TODO
-      return null;
+      const todo = ctx.prisma.todo.create({ data: input });
+      return todo;
+    },
+  })
+  .mutation("remove", {
+    input: z.object({
+      id: z.number(),
+    }),
+    async resolve({ ctx, input }) {
+      const todo = ctx.prisma.todo.delete({ where: { id: input.id } });
+      return todo;
     },
   });

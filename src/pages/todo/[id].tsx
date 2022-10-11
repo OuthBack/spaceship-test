@@ -2,11 +2,14 @@ import { useRouter } from "next/router";
 import { trpc } from "../../utils/trpc";
 
 const Todo = () => {
-  const { query } = useRouter();
+  const { query, push } = useRouter();
   const todoId = parseInt(query.id as string);
+
   // Adequar chamada e dinamizar página
-  const { data } = trpc.useQuery(["todos.get", {}]);
+  const { data } = trpc.useQuery(["todos.get", { id: todoId }]);
+
   if (!query) return null;
+
   return (
     <div
       style={{
@@ -17,13 +20,17 @@ const Todo = () => {
         paddingTop: 32,
       }}
     >
-      <h1>Todo Title</h1>
-      <p style={{ maxWidth: "80ch" }}>
-        Todo description Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Accusamus illum harum nobis perspiciatis? Iusto perferendis,
-        molestias, velit atque obcaecati qui vero placeat vitae soluta tenetur,
-        autem et reprehenderit deserunt veritatis?
-      </p>
+      {data ? (
+        <>
+          <h1>{data.title}</h1>
+          <p style={{ maxWidth: "80ch" }}>{data.description}</p>
+        </>
+      ) : (
+        <>
+          <h1>Todo not Found</h1>
+        </>
+      )}
+      <button onClick={() => push("/")}>Home</button>
     </div>
   );
 };
