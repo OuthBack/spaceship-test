@@ -109,20 +109,23 @@ OR
 
 OR
 
-1.
-   ```sh
-   git clone https://github.com/OuthBack/todo-app.git
-   ```
-2. ```sh
-   npm install -g pnpm
-   ```
-3. ```sh
-   pnpm i
-   ```
+1. Clone the repository
+  ```sh
+  git clone https://github.com/OuthBack/todo-app.git
+  ```
+2. Install pnpm 
+  ```sh
+  npm install -g pnpm
+  ```
+3. Install dependencies 
+  ```sh
+  pnpm i
+  ```
 
-4. ```sh
-   pnpm dev
-   ```
+4. Run app 
+  ```sh
+  pnpm dev
+  ```
 
 <!-- LICENÇA -->
 ## :pencil: License
@@ -132,7 +135,7 @@ Under MIT license.
                                                       
                                                       
 <!-- CONTACT -->
-## :telephone_receiver: Contato
+## :telephone_receiver: Contact
 
 Henrique Figueiredo - riquessan@gmail.com
 LinkedIn -  https://linkedin.com/in/h-figueiredo
