@@ -138,7 +138,9 @@ Under MIT license.
 ## :telephone_receiver: Contact
 
 Henrique Figueiredo - riquessan@gmail.com
+
 LinkedIn -  https://linkedin.com/in/h-figueiredo
+
 Project link: [https://github.com/OuthBack/todo-app](https://github.com/OuthBack/todo-app)
 
 
