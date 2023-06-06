@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate && prisma db push && prisma db seed"
+    "postinstall": "pnpm prisma generate && pnpm prisma db push && pnpm prisma db seed"
   },
   "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "seed": "pnpm ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.10",
@@ -40,6 +40,7 @@
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
     "prisma": "^4.3.1",
+    "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "4.7.4"
   },

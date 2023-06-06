@@ -1,91 +1,157 @@
-# Teste Estagiário / Júnior Spaceship
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-Bem vindo ao teste da Spaceship Foundation! O exame a seguir foi criado pra avaliar sua habilidade de aprender a utilizar nossa stack, incluindo buscar conhecimento, conforto em fazer perguntas e identificar as partes importantes do código.
 
-## Stack
 
-A stack que utilizamos é chamada [T3 Stack](https://create.t3.gg/), uma stack focada e integrada através de TypeScript garantindo iterações rápidas e facilidade de onboarding. Os principais pontos são:
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-- [TypeScript](https://www.typescriptlang.org/)
-   
-  Fundamento de qualquer desenvolvimento moderno Web/NodeJS. Aprimora o JavaScript tradicional ao trazer tipagem a linguagem.
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-- [Next JS](https://nextjs.org/)
 
-  Framework que traz React para o Server. Habilita renderização no servidor melhorando SEO, geração estática de páginas e facilita roteamento entre páginas
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h3 align="center">Todo Site</h3>
 
-- [Prisma](https://www.prisma.io/)
+  <p align="center">
+    A site to add a TODO with a description and date
+    <br />
+    <br />
+    <a href="https://vehicles-angular.vercel.app">Preview</a>
+    ·
+    <a href="https://github.com/OuthBack/todo-app/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/OuthBack/todo-app/issues">Request Feature</a>
+  </p>
+</p>
 
-  ORM focada em TypeScript. Gera tipagem após alterações no Schema, gerencia mutações e fornece uma API simplificada para Read e Write no banco de dados
 
-- [Tailwind CSS](https://tailwindcss.com/)
 
-  Pacote de estilização através de classes de utilidade. Fornece um padrão de design atrativo além de customização para layouts responsivos
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Summary</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About</a>
+      <ul>
+        <li><a href="#built-with">Built with:</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Requirements</a></li>
+        <li><a href="#installation">Installing</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
 
-- [tRPC](https://trpc.io/)
+  </ol>
+</details>
 
-  Pacote de criação de APIs que garante a integridade de tipos do back ao front-end, além de facilidade de desenvolvimento
 
-## Execução do projeto
 
-Para executar o projeto primeiramente execute `npm install` ou `yarn install`, caso tenha yarn instalado. Após a instalação das dependências o banco de dados local será migrado automaticamente e os dados iniciais (seed) serão criados.
+<!-- ABOUT THE PROJECT -->
+## 📖 About
 
-Para executar o servidor utilize o comando `npm run dev` ou `yarn dev`. O projeto estará disponível em `http://localhost:3000`
+A site to add a TODO with a description and date
 
-## Estrutura
+### 🔋 Built with:
 
-- Páginas web
-  
-  Todas as paginas web estão sob `src/pages` dado o padrão do NextJs
+* [Node.js](https://nodejs.org/en)
+* [Prisma](https://www.prisma.io)
+* [tRPC](https://trpc.io)
+* [SQLite](https://www.sqlite.org/index.html)
+* [Next.js](https://nextjs.org)
+* [React](https://react.dev)
+* [PNPM](https://pnpm.io/pt/)
+* [Docker](https://www.docker.com)
+* [Docker-Compose](https://docs.docker.com/compose)
 
-- Servidor tRPC
+<!-- GETTING STARTED -->
+## :scroll: Getting Started
 
-  Todas as rotas (chamadas de API) do tRPC estão localizadas em `src/server/router`. Para este teste você precisara fazer algumas alterações no arquivo `src/server/router/todos.ts`
+To run the project you just need:
 
-- Schema do banco de dados
-  
-  Todos os arquivos relevantes ao Prisma estao na pasta `prisma`. Isso inclui o Schema (mapeamento de tabelas e relações) e o arquivo sqlite (banco local)
-## Tarefas
+### :warning: Requirements
 
-Abaixo estão as tarefas que você deve executar, em ordem de prioridade
+* Docker-Compose
+OR
+* Node.js 16.14.0
+* PNPM
 
-1. Deixar a lista de TODOs responsiva.
+### :gear: Installing
 
-    Utilizando Flex Box, faça com que a lista de TODOs suporte mais de um item horizontalmente quando em telas largas dinamicamente.
+1. Clone the repository
+   ```sh
+   git clone https://github.com/OuthBack/todo-app.git
+   ```
+2. Start the container
+   ```sh
+    docker-compose up -d
+   ```
+3. Access http://localhost:3000
 
-    Arquivo relevante: `src/pages/index.tsx`
+OR
 
-2. Detalhe de todo
+1.
+   ```sh
+   git clone https://github.com/OuthBack/todo-app.git
+   ```
+2. ```sh
+   npm install -g pnpm
+   ```
+3. ```sh
+   pnpm i
+   ```
 
-    Ao clicar em um item da lista você é redirecionado a uma página específica daquele item. 
+4. ```sh
+   pnpm dev
+   ```
 
-    Esta pagina ainda não puxa os dados do item de forma correta do banco de dados. Você precisará implementar a chamada no backend para encontrar um item por seu ID que é utilizada no frontend, e fazer com que a página exiba os dados retornados.
+<!-- LICENÇA -->
+## :pencil: License
+                                                     
+                                                    
+Under MIT license.
+                                                      
+                                                      
+<!-- CONTACT -->
+## :telephone_receiver: Contato
 
-    Arquivos relevantes:
-    - `src/server/router/todos.ts`
-    - `src/pages/todo/[id].tsx`
+Henrique Figueiredo - riquessan@gmail.com
+LinkedIn -  https://linkedin.com/in/h-figueiredo
+Project link: [https://github.com/OuthBack/todo-app](https://github.com/OuthBack/todo-app)
 
-3. Formulário de criar novo item
 
-    O formulário da página principal deve conter todos os campos necessários para criação de um TODO, além de fazer a chamada correta de banco de dados. 
-    
-    Para isso, adicione um campo `description` (textarea) utilizando o campo `title` de referência. Depois crie a chamada no backend que executa a criação de um novo item.
-
-    Arquivos relevantes:
-    - `src/pages/index.tsx`
-    - `src/server/router/todos.ts`
-    - https://react-hook-form.com/
-
-4. Excluir um TODO
-
-    **Este item requer que você execute tudo que aprendeu das tarefas acima.**
-
-    O botão de deletar um TODO existe mas não possui funcionalidade.
-
-    Crie a chamada de backend para deletar o item e chame o hook correto no frontend pra que ela seja executada quando clicar um botão. A chamada deve deletar o todo correto, por seu ID.
-
-5. Estilização do formulário
-
-    Adicione estilos aos campos e botão do formulário de forma que fique de acordo com o [design neste Figma](https://www.figma.com/file/Ie30m2tZq2pcDhEfyIcUfD/Xhibiter.1.0?node-id=1090%3A14836). 
-    
-    Estilos de interação como mudar a cor da borda ao selecionar e mudança do botão ao passar o mouse por cima não são obrigatórios mas interessante. Não precisa preocupar com a fonte
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/h-figueiredo
+[product-screenshot]: .github/screenshot.png
+[site-status]: https://img.shields.io/website/https/vehicles-angular.vercel.app/path/to/page.html.svg.?style=for-the-badge
